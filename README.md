@@ -4,6 +4,21 @@
 
 LibreSlot is a cutting-edge, open-source appointment system designed to streamline the scheduling process with efficiency and style. Built on the powerful combination of SvelteKit, Tailwind CSS, Daisy UI, and Firebase, this app offers a seamless and modern experience for both users and developers alike.
 
+## Key Features
+
+Admin
+- Manage Pages
+- Manage Appointments
+- Manage Slots
+- Manage Services
+- Manage Navigation
+- Manage News
+  
+Client
+- View Pages
+- View News
+- Make an appointment
+
 ## System Requirements
 
 - NodeJS
@@ -28,6 +43,9 @@ npm run dev
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
 ```
+
+Admin: http://localhost:5173/admin
+Cleint: http://localhost:5173
 
 ## Building
 
