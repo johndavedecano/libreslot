@@ -7,6 +7,8 @@ export async function load() {
 
   const settings = snap.data();
 
+  console.log(JSON.stringify(settings));
+
   return {
     settings,
   };

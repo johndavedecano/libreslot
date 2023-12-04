@@ -1,0 +1,17 @@
+{
+  "cover": "/logo.png",
+  "province": "Metro Manila",
+  "city": "Pasig City",
+  "name": "Company Name",
+  "logo": "/logo.png",
+  "email": "info@barangay.ph",
+  "maintenance_enabled": false,
+  "zipcode": "1606",
+  "region": "NCR",
+  "maintenance_message": "qwewqewqeqwewqeqw",
+  "maintenance_ends_at": "2023-11-10",
+  "address": "My address",
+  "phone": "+63 87 500 1319",
+  "appointment_enabled": false,
+  "navigation": [{ "name": "Home", "id": 1699816726292, "to": "/", "order": 0 }]
+}

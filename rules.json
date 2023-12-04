@@ -1,0 +1,65 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+    
+    match /settings/{name} {
+  		allow write, update, delete: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.admin == true;
+    }
+    
+    match /settings/hours {
+  		allow read: if true;
+    }
+    
+   match /settings/common {
+  		allow read: if true;
+    }
+    
+    match /sevices/{serviceId} {
+  		allow read: if request.auth != null;
+    }
+    
+    match /slots/{serviceId} {
+  		allow read: if request.auth != null;
+    }
+    
+    match /pages/{pageId} {
+  		allow read: if request.auth != null;
+    }
+    
+    match /posts/{postId} {
+  		allow read: if request.auth != null;
+    }
+    
+    match /users/{userId} {
+  		allow read: if request.auth != null && (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.admin == true || request.auth.uid == userId);
+    }
+    
+    match /sevices/{serviceId} {
+  		allow write, update, delete: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.admin == true;
+    }
+    
+    match /slots/{slotId} {
+  		allow write, update, delete: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.admin == true;
+    }
+    
+    match /pages/{pageId} {
+  		allow write, update, delete: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.admin == true;
+    }
+    
+    match /posts/{postId} {
+  		allow write, update, delete: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.admin == true;
+    }
+    
+    match /appointments/{id} {
+  		allow read, write, update: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.admin == true || request.auth != null && get(/databases/$(database)/documents/appointments/$(id)).data.user == request.auth.uid;
+    }
+    
+    match /appointments/{id} {
+  		allow delete: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.admin == true;
+    }
+  }
+}
