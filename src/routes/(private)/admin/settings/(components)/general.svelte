@@ -42,7 +42,7 @@
 <form action="" method="POST" on:submit|preventDefault={onSubmit}>
   <div class="flex items-center gap-6 mb-4">
     <div class="flex-1">
-      <div class="font-bold text-base mb-2">Barangay Name</div>
+      <div class="font-bold text-base mb-2">Company Name</div>
       <input
         type="text"
         class="input input-bordered w-full"
