@@ -17,8 +17,7 @@
 <CommonNav {data} />
 
 <div class="hero min-h-screen">
-  <div class="hero-overlay bg-opacity-60" />
-  <div class="hero-content text-center text-neutral-content">
+  <div class="hero-content text-center">
     <div class="max-w-xl">
       <img src={data.settings.logo || "/logo.png"} alt="" />
       <h1 class="mb-5 text-3xl lg:text-5xl font-bold">
@@ -50,7 +49,7 @@
   }
 
   .nav-brand {
-    @apply font-bold text-lg text-white;
+    @apply font-bold text-lg;
   }
 
   .nav-items {
@@ -58,7 +57,7 @@
   }
 
   .nav-items a {
-    @apply text-white;
+    @apply text-gray-900;
   }
 
   .nav-items a:hover {
