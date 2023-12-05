@@ -47,7 +47,7 @@ npm run dev -- --open
 Import seed.json and add rules.json to firestore
 
 Admin: http://localhost:5173/admin
-Cleint: http://localhost:5173
+Client: http://localhost:5173
 
 ## Building
 
